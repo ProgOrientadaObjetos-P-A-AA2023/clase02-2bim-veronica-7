@@ -77,6 +77,7 @@ public class Estudiante {
                 edadEstudiante);
         
         return cadena;
+    //Al no tener un toString presenta directamente de la clase padre. object
     }
     
 

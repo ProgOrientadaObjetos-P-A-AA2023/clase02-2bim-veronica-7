@@ -26,7 +26,7 @@ public class Ejecutor2 {
         estDistancia.establecerNumeroAsginaturas(5);
         estDistancia.calcularMatriculaDistancia();
         
-        String cadenaFinal = String.format("%s", estDistancia);
+        String cadenaFinal = String.format("%s", estDistancia);// envia al parametro que esta en ese momento en estDistancia, o sea el parametro de Estuadiante
         cadenaFinal = String.format("%s\n"
                 + "Costo Asignatura: %.2f\n"
                 + "Número de Asignaturas: %d\n"

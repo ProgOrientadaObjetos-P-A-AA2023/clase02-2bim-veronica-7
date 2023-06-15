@@ -11,6 +11,11 @@ public class EstudiantePresencial extends Estudiante{
     private double costoCredito;
     private double matriculaPresencial;
     
+    public EstudiantePresencial(String n, String a, String iden, int ed){
+        super(n, a, iden, ed);
+        /* se utiliza la palabra super para llamar al constructor de la superclase */
+    }
+    
     //  Métodos establecer y calcular para los datos o atributos de la clase
     // 2.  Método establecerNumeroCreditos(numero: Real)
     public void establecerNumeroCreditos(int numero){

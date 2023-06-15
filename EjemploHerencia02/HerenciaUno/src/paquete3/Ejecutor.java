@@ -23,6 +23,11 @@ public class Ejecutor {
                 apellido, identificacion, edad);
         
         System.out.println(estDistancia);
+        
+        EstudiantePresencial esPresencial = new EstudiantePresencial
+        ("Mauricio", "Lopez", "124058", 25);
+        
+        System.out.println(esPresencial);
                 
         
     }
