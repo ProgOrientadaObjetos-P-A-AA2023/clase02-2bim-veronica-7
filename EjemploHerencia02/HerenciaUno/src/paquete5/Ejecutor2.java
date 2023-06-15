@@ -17,6 +17,10 @@ public class Ejecutor2 {
         // 1. Crear y presentar un obj de tipo Estudiante Presencial,
         // con datos por teclado
         Scanner entrada = new Scanner(System.in);
+        EstudiantePresencial[] listado = new EstudiantePresencial[4];
+        
+        for(int i=0; i<listado.length; i++){
+
         entrada.useLocale(Locale.US);
         System.out.println("Ingrese nombre");
         String n = entrada.nextLine();
@@ -29,12 +33,17 @@ public class Ejecutor2 {
         System.out.println("Ingrese número de créditos");
         int creditos = entrada.nextInt();
         System.out.println("Ingrese costo de créditos");
-        double costo = entrada.nextInt();
+        double costo = entrada.nextDouble();        
         
         EstudiantePresencial presencial = new EstudiantePresencial(n, ap, ced, 
                 edad, creditos, costo);
         presencial.calcularMatriculaPresencial();
         
-        System.out.printf("%s\n", presencial);
+        listado[i] = presencial;    
+        }
+        
+        for(int i=0; i<listado.length; i++){
+        System.out.printf("%s\n", listado[i]);
+        }
     }
 }
