@@ -19,25 +19,46 @@ public class Ejecutor2 {
         // Debe existir 1 sola impresión de todos los estudiantes presenciales
         // No usar arreglos
         
-        // Trabajo clases 16 junio 2022
+        // Trabajo clases 15 junio 2022
         Scanner entrada = new Scanner(System.in);
         boolean bandera = true;
         String cadena = "";
         
         while(bandera){
-            System.out.println("ingresa un saludo");
+            /*System.out.println("ingresa un saludo");
             String saludo = entrada.nextLine();
-            cadena = String.format("%s%s\n", cadena, saludo);
-            System.out.println("Desea salir, pulse S");
+            cadena = String.format("%s%s\n", cadena, saludo);*/
+            
+            System.out.println("Ingrese nombre");
+            String n = entrada.nextLine();
+            System.out.println("Ingrese apellido");
+            String ap = entrada.nextLine();
+            System.out.println("Ingrese identificación");
+            String ced = entrada.nextLine();
+            System.out.println("Ingrese edad");
+            int edad = entrada.nextInt();
+            System.out.println("Ingrese costo de créditos");
+            double costo = entrada.nextDouble();
+            System.out.println("Ingrese número de créditos");
+            int creditos = entrada.nextInt();
+            
+            EstudiantePresencial presencial = new EstudiantePresencial(n, ap, ced, 
+                edad, costo, creditos);
+            
+            presencial.calcularMatriculaPresencial();
+            
+            cadena = String.format("%s%s\n", cadena, presencial);
+            
+            entrada.nextLine();
+            System.out.println("Desea salir, pulse si");
             String opcion = entrada.nextLine();
-            if(opcion.equals("S")){
+            if(opcion.equals("si")){
                 bandera = false;
             }
-        }
-        
+        } 
+        System.out.println("Estudiantes Presencial:\n");
         System.out.printf("%s\n", cadena);
-        
-        
+     
     }
 }
 
